@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Bài 1: Viết chương trình nhập vào ngày, tháng, năm (Giả sử nhập đúng, không cần kiểm tra hợp lệ). Tìm ngày, tháng, năm của ngày tiếp theo. Tương tự tìm ngày tháng năm của ngày trước đó. -->
+      <section id="nextDayMonthYear">
+        <div class="container mt-3 d-flex justify-content-center w-100">
+          <div class="border border-primary">
+            <div class="title text-center mt-3">
+              <h2 class="bg-primary text-white d-inline-block p-3">
+                Viết chương trình nhập vào ngày, tháng, năm. Tìm ngày, tháng,
+                năm của ngày tiếp theo
+              </h2>
+            </div>
+
+            <form action="" class="d-inline-block m-3">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputDay" class="mr-3">Nhập vào số ngày</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputDay"
+                  placeholder="Nhập vào số ngày"
+                />
+              </div>
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputMonth" class="mr-3">Nhập vào số tháng</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputMonth"
+                  placeholder="Nhập vào số tháng"
+                />
+              </div>
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputYear" class="mr-3">Nhập vào số năm</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputYear"
+                  placeholder="Nhập vào số năm"
+                />
+              </div>
+            </form>
+
+            <div class="d-flex align-items-center m-3">
+              <button
+                class="btn btn-primary mr-3"
+                id="calNextPreDayMonthYear"
+                onclick="calcNextPreDayHandle()"
+              >
+                Tính ngày tiếp theo và trước đó
+              </button>
+              <div
+                class="result__preDayMonthYear ml-5 text-danger text-uppercase font-weight-bold"
+              ></div>
+              <div
+                class="result__nextDayMonthYear ml-5 text-danger text-uppercase font-weight-bold"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 2: Viết chương trình nhập vào tháng, năm. Tìm số ngày của tháng đó. (bao gồm cả năm nhuận) -->
+      <section id="MonthYear">
+        <div class="container mt-3 d-flex justify-content-center w-100">
+          <div class="border border-primary">
+            <div class="title text-center mt-3">
+              <h2 class="bg-primary text-white d-inline-block p-3">
+                Viết chương trình nhập vào tháng, năm. Tìm số ngày của tháng đó. (bao gồm cả năm nhuận)
+              </h2>
+            </div>
+
+            <form action="" class="d-inline-block m-3">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputMonth2" class="mr-3">Nhập vào số tháng</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputMonth2"
+                  placeholder="Nhập vào số tháng"
+                />
+              </div>
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputYear2" class="mr-3">Nhập vào số năm</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputYear2"
+                  placeholder="Nhập vào số năm"
+                />
+              </div>
+            </form>
+
+            <div class="d-flex align-items-center m-3">
+              <button
+                class="btn btn-primary mr-3"
+                id="calcDayOfMonthHandle"
+                onclick="calcDayOfMonthHandle()"
+              >
+                Tính ngày trong tháng
+              </button>
+              <div
+                class="result__dayOfMonth ml-5 text-danger text-uppercase font-weight-bold"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- // Bài 3: Viết chương trình nhập vào số nguyên có 3 chữ số. In ra các đọc của số đó. -->
+      <section id="printNumber">
+        <div class="container mt-3 d-flex justify-content-center w-100">
+          <div class="border border-primary">
+            <div class="title text-center mt-3">
+              <h2 class="bg-primary text-white d-inline-block p-3">
+                Viết chương trình nhập vào số nguyên có 3 chữ số. In ra các đọc của số đó.
+              </h2>
+            </div>
+
+            <form action="" class="d-inline-block m-3">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputNumber" class="mr-3">Nhập số nguyên có 3 chữ số</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputNumber"
+                  placeholder="Nhập số nguyên có 3 chữ số"
+                />
+              </div>
+            </form>
+
+            <div class="d-flex align-items-center m-3">
+              <button
+                class="btn btn-primary mr-3"
+                id="printReadNumber"
+                onclick="printReadNumber()"
+              >
+                In cách đọc của số đó
+              </button>
+              <div
+                class="result__printReadNumber ml-5 text-danger text-uppercase font-weight-bold"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 4: Cho biết tên và tọa độ nhà của 3 sinh viên và tọa độ của trường đại học. Viết chương trình in tên sinh viên xa trường nhất. -->
+      <section id="oXY">
+        <div class="container mt-3 d-flex justify-content-center w-100">
+          <div class="border border-primary">
+            <div class="title text-center mt-3">
+              <h2 class="bg-primary text-white d-inline-block p-3">
+                Viết chương trình in tên sinh viên xa trường nhất
+              </h2>
+            </div>
+
+            <form action="" class="d-inline-block m-3">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputStudent1" class="mr-3">Nhập vào tên sinh viên 1:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputStudent1"
+                  placeholder="Nhập vào tên sinh viên 1:"
+                />
+              </div>
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputX" class="mr-3">Nhập vào tọa độ trường:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputX1"
+                  placeholder="Nhập vào tọa độ trường"
+                />
+              </div>
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputY" class="mr-3">Nhập vào tọa độ nhà:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputY1"
+                  placeholder="Nhập vào tọa độ nhà"
+                />
+              </div>
+            </form>
+
+            <form action="" class="d-inline-block m-3">
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputStudent2" class="mr-3">Nhập vào tên sinh viên 2:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputStudent2"
+                    placeholder="Nhập vào tên sinh viên 2:"
+                  />
+                </div>
+  
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputX2" class="mr-3">Nhập vào tọa độ trường:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inputX2"
+                    placeholder="Nhập vào tọa độ trường"
+                  />
+                </div>
+  
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputY2" class="mr-3">Nhập vào tọa độ nhà:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inputY2"
+                    placeholder="Nhập vào tọa độ nhà"
+                  />
+                </div>
+              </form>
+
+              <form action="" class="d-inline-block m-3">
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputStudent3" class="mr-3">Nhập vào tên sinh viên 3:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputStudent3"
+                    placeholder="Nhập vào tên sinh viên 3:"
+                  />
+                </div>
+  
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputX3" class="mr-3">Nhập vào tọa độ trường:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inputX3"
+                    placeholder="Nhập vào tọa độ trường"
+                  />
+                </div>
+  
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputY3" class="mr-3">Nhập vào tọa độ nhà:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inputY3"
+                    placeholder="Nhập vào tọa độ nhà"
+                  />
+                </div>
+              </form>
+
+            <div class="d-flex align-items-center m-3">
+              <button
+                class="btn btn-primary mr-3"
+                id="calcStudentFar"
+                onclick="calcStudentFar()"
+              >
+                Tìm sinh viên xa trường nhất
+              </button>
+              <div
+                class="result__studentFar ml-5 text-danger text-uppercase font-weight-bold"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
